@@ -26,15 +26,18 @@ const App = () => {
     try {
       setUrlOriginal(inputValue);
 
-      const response = await fetch('http://localhost:5099/encurtar', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+      const response = await fetch(
+        'https://encurtaurl-fzerbcfxabhhh4hf.brazilsouth-01.azurewebsites.net/api/encurtar',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            url: inputValue,
+          }),
         },
-        body: JSON.stringify({
-          url: inputValue,
-        }),
-      });
+      );
 
       const data = await response.json();
       setUrlEncurtada(data.urlEncurtada || 'URL encurtada não disponível');

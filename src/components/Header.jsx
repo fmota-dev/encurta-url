@@ -10,7 +10,7 @@ const Header = () => {
         </div>
       </div>
       <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-        Encurta.Url
+        3ncurta.Url
       </h1>
       <p className="text-gray-300 text-lg">
         Transforme URLs longas em links curtos e compartilháveis
